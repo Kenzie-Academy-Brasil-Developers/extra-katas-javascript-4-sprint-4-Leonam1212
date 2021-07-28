@@ -25,7 +25,7 @@ function kata1() {
     let arrCitiesCSV = gotCitiesCSV.split(", ")
     
     showResults("Kata 01",arrCitiesCSV)
- 
+    return arrCitiesCSV
 
   
 
@@ -40,7 +40,7 @@ const kata2 = () => {
 
     let arrayBestThing = bestThing.split(" ")
     showResults("Kata 02",arrayBestThing)
-
+    return arrayBestThing
 
 }
 
@@ -56,7 +56,7 @@ const kata3 = () => {
     let newString = gotCitiesCSV.replace(/,/g, "; ")
 
     showResults("Kata 03",newString)
-
+    return newString
 }
 kata3()
 
@@ -70,7 +70,7 @@ let newString = lotrCitiesArray.join(", ")
 console.log(newString)
 
 showResults("Kata 04",newString)
-
+return newString
 }
 kata4()
 
@@ -87,6 +87,7 @@ function kata5 () {
     console.log(output)
    
     showResults("Kata 05",output)
+    return output
  }
 
  kata5()
@@ -102,6 +103,7 @@ function kata6 () {
 
 
 showResults("Kata 06",output)
+return output
 
 }
 kata6()
@@ -117,6 +119,7 @@ let kata7 = () => {
         output.push(lotrCitiesArray[i])
     }
     showResults("Kata 07",output)
+    return output
 } 
 
 kata7()
@@ -128,6 +131,7 @@ function kata8 () {
 
 lotrCitiesArray.splice(2,1)
 showResults("kata 08", lotrCitiesArray)
+return lotrCitiesArray
 
 }
 
@@ -139,7 +143,7 @@ function kata9 () {
 
 lotrCitiesArray.splice(5,2)
 showResults("kata 09", lotrCitiesArray)
-
+return lotrCitiesArray
 }
 
 
@@ -149,7 +153,7 @@ kata9()
 function kata10 () {
 lotrCitiesArray.splice(2,0, "Rohan")
     showResults("kata 10", lotrCitiesArray)
-    
+    return lotrCitiesArray
     }
     
     
@@ -159,7 +163,7 @@ kata10()
 function kata11 () {
     lotrCitiesArray.splice(5,1, "Deadest Marshes")
         showResults("kata 11", lotrCitiesArray)
-        
+            return lotrCitiesArray
         }
         
         
@@ -172,7 +176,7 @@ function kata12 () {
            let remove = bestThing.slice(0,14)
            showResults("Kata 12", remove)
 
-
+return remove
 }
 
 kata12()
@@ -182,7 +186,7 @@ function kata13 () {
     
     let remove = bestThing.slice(bestThing.length-12)
     showResults("Kata 13", remove)
-
+return remove
 
 }
 
@@ -195,7 +199,7 @@ function kata14 () {
     let remove = bestThing.slice(23, 38)
     showResults("Kata 14", remove)
 
-
+    return remove
 }
 
 kata14()
@@ -209,7 +213,7 @@ function kata15 () {
     let remove = bestThing.substring(bestThing.length-12)
     showResults("Kata 15", remove)
 
-
+return remove
 }
 
 kata15()
@@ -218,7 +222,7 @@ function kata16 () {
     
     let remove = bestThing.substring(23, 38)
     showResults("Kata 16", remove)
-
+    return remove
 
 }
 
@@ -229,7 +233,7 @@ function kata17 () {
     //Retirar a ultima cidade de lotrCitiesArray
     let removeLast = lotrCitiesArray.pop()
     showResults("Kata 17", lotrCitiesArray)
-
+    return lotrCitiesArray
 
 }
 
@@ -239,7 +243,7 @@ function kata18 () {
 
     let removeLast = lotrCitiesArray.pop()
     showResults("Kata 18", lotrCitiesArray)
-
+    return lotrCitiesArray
 
 }
 
@@ -251,6 +255,7 @@ function kata19 () {
 
     lotrCitiesArray.shift()
     showResults("Kata 19", lotrCitiesArray)
+    return lotrCitiesArray
 }
 
 kata19()
@@ -260,7 +265,7 @@ function kata20 () {
 
     lotrCitiesArray.unshift("Mordor")
     showResults("Kata 20", lotrCitiesArray)
-
+    return lotrCitiesArray
 }
 kata20()
 
@@ -276,6 +281,7 @@ function kataBonus1 () {
     let resultOnly = arrBestThing.indexOf("only")
 
     showResults("KataBonus1", resultOnly)
+    return resultOnly
 }
 kataBonus1()
 
@@ -286,7 +292,7 @@ let arrBestThing = bestThing.split(" ")
 let result = arrBestThing.indexOf("bit")
 
 showResults("KataBonus2", result)
-
+return result
 
 }
 
@@ -315,6 +321,7 @@ const kataBonus4  = () => {
     }
 
 showResults("kataBonus4", newArr)
+return newArr
 
 }
 
@@ -332,7 +339,7 @@ const kataBonus5  = () => {
     }
 
 showResults("kataBonus5", newArr)
-
+return newArr
 }
 
 kataBonus5()
@@ -347,7 +354,7 @@ let include = lotrCitiesArray.includes("Mirkwood")
 let result = include ? "Sim" : "Não"
 
 showResults("kataBonus6", result)
-
+return result
 }
 
 kataBonus6()
@@ -360,7 +367,7 @@ const kataBonus7  = () => {
     let result = include ? "Sim" : "Não"
     
     showResults("kataBonus7", result)
-    
+    return result
     }
     
 kataBonus7()
@@ -372,7 +379,7 @@ let lotrCitiesArray = ["Mordor","Gondor","Rohan","Beleriand","Mirkwood","Dead Ma
 
 let index = lotrCitiesArray.indexOf("Mirkwood")
 showResults("kataBonus8", index)
-
+return index
 }
 kataBonus8()
 
@@ -386,6 +393,8 @@ for (let i = 0; i< lotrCitiesArray.length; i++) {
         showResults("kataBonus9", lotrCitiesArray.indexOf(lotrCitiesArray[i]))
     }
   }
+
+  return lotrCitiesArray
 }
 kataBonus9()
 
@@ -394,7 +403,7 @@ const kataBonus10 = () => {
     
     let lotrCitiesArray = ["Mordor","Gondor","Rohan","Beleriand","Mirkwood","Dead Marshes","Rhun","Harad"];
 showResults("kataBonus10", lotrCitiesArray.reverse())
-
+return lotrCitiesArray
 }
 
 kataBonus10()
@@ -404,7 +413,7 @@ const kataBonus11 = () => {
     let lotrCitiesArray = ["Mordor","Gondor","Rohan","Beleriand","Mirkwood","Dead Marshes","Rhun","Harad"];
 
 showResults("kataBonus11", lotrCitiesArray.sort())
-
+return lotrCitiesArray.sort()
 }
 kataBonus11()
 

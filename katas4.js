@@ -241,7 +241,7 @@ kata17()
 
 function kata18 () {
 
-    let removeLast = lotrCitiesArray.pop()
+    let addLast = lotrCitiesArray.push("Dead Marshes")
     showResults("Kata 18", lotrCitiesArray)
     return lotrCitiesArray
 
@@ -375,7 +375,6 @@ kataBonus7()
 
 const kataBonus8 = () => {
 
-let lotrCitiesArray = ["Mordor","Gondor","Rohan","Beleriand","Mirkwood","Dead Marshes","Rhun","Harad"];
 
 let index = lotrCitiesArray.indexOf("Mirkwood")
 showResults("kataBonus8", index)
@@ -386,7 +385,6 @@ kataBonus8()
 
 const kataBonus9 = () => {
 
-let lotrCitiesArray = ["Mordor","Gondor","Rohan","Beleriand","Mirkwood","Dead Marshes","Rhun","Harad"];
 
 for (let i = 0; i< lotrCitiesArray.length; i++) {
     if(lotrCitiesArray[i].includes(" ")){
@@ -401,7 +399,6 @@ kataBonus9()
 
 const kataBonus10 = () => {
     
-    let lotrCitiesArray = ["Mordor","Gondor","Rohan","Beleriand","Mirkwood","Dead Marshes","Rhun","Harad"];
 showResults("kataBonus10", lotrCitiesArray.reverse())
 return lotrCitiesArray
 }
@@ -410,7 +407,6 @@ kataBonus10()
 
 const kataBonus11 = () => {
 
-    let lotrCitiesArray = ["Mordor","Gondor","Rohan","Beleriand","Mirkwood","Dead Marshes","Rhun","Harad"];
 
 showResults("kataBonus11", lotrCitiesArray.sort())
 return lotrCitiesArray.sort()
